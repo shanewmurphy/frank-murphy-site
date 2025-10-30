@@ -7,12 +7,6 @@ import { Separator } from "@/components/ui/separator";
 export function SeparatorDemo() {
   return (
     <div>
-      <div className="space-y-1">
-        <h4 className="text-sm leading-none font-medium">Radix Primitives</h4>
-        <p className="text-muted-foreground text-sm">
-          An open-source UI component library.
-        </p>
-      </div>
       <Separator className="my-4" />
       <div className="flex h-5 items-center space-x-4 text-sm">
         <div>Blog</div>
@@ -55,11 +49,22 @@ export default function PropertyCard({ property }) {
           </div>
           <Separator className="my-2" />
           <div className="flex text-sm items-center justify-between font-medium text-gray-500 mt-1">
-            <div>{property.rooms} Beds</div>
+            <div className="text-base text-gray-800">
+              {property.rooms} <span className="text-xs">Beds</span>
+            </div>
             <div className="h-5">
               <Separator orientation="vertical" />
             </div>
-            <div>{property.size} m2</div>
+            <div className="text-base text-gray-800">
+              {property.bathrooms}
+              <spam className="text-xs pl-1">Bathrooms</spam>
+            </div>
+            <div className="h-5">
+              <Separator orientation="vertical" />
+            </div>
+            <div className="text-base text-gray-800">
+              {property.size} <spam className="text-xs pl-1">m2</spam>
+            </div>
           </div>
         </div>
       </div>
