@@ -6,7 +6,7 @@ import ResetFiltersButton from "./ResetFiltersButton";
 
 export default function FilterBar({ filters, setFilters }) {
   return (
-    <div className="flex flex-wrap items-center gap-4 mb-8">
+    <div className="flex flex-wrap items-center gap-4">
       <LocationSelect filters={filters} setFilters={setFilters} />
       <PropertyTypeSelect filters={filters} setFilters={setFilters} />
       {/* <RoomsFilter filters={filters} setFilters={setFilters} /> */}

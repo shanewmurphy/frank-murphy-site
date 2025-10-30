@@ -9,6 +9,29 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import FilterBar from "./FilterBar";
 import PropertiesGrid from "@/components/Properties/PropertiesGrid";
 
+import { Separator } from "@/components/ui/separator";
+
+export function SeparatorDemo() {
+  return (
+    <div>
+      <div className="space-y-1">
+        <h4 className="text-sm leading-none font-medium">Radix Primitives</h4>
+        <p className="text-muted-foreground text-sm">
+          An open-source UI component library.
+        </p>
+      </div>
+      <Separator className="my-4" />
+      <div className="flex h-5 items-center space-x-4 text-sm">
+        <div>Blog</div>
+        <Separator orientation="vertical" />
+        <div>Docs</div>
+        <Separator orientation="vertical" />
+        <div>Source</div>
+      </div>
+    </div>
+  );
+}
+
 export default function PropertyTabs() {
   const [activeTab, setActiveTab] = useState("houses");
   const [filters, setFilters] = useState({
@@ -52,37 +75,44 @@ export default function PropertyTabs() {
 
   return (
     <div className="space-y-8">
-      <Tabs
-        value={activeTab}
-        onValueChange={handleTabChange}
-        className="w-full"
-      >
-        <TabsList className="grid w-full grid-cols-3 bg-muted/30">
-          <TabsTrigger value="houses">Houses</TabsTrigger>
-          <TabsTrigger value="commercial">Commercial</TabsTrigger>
-          <TabsTrigger value="renting">Renting</TabsTrigger>
-        </TabsList>
+      <div>
+        <Tabs
+          value={activeTab}
+          onValueChange={handleTabChange}
+          className="flex w-full"
+        >
+          {/* Tabs and Filters side by side, now using flex */}
+          <div className="flex gap-8 items-start w-full">
+            {/* Tab list (left, flex-1) */}
+            <div className="flex-1">
+              <TabsList className="w-full bg-muted/30">
+                <TabsTrigger value="houses">Houses</TabsTrigger>
+                <TabsTrigger value="commercial">Commercial</TabsTrigger>
+                <TabsTrigger value="renting">Renting</TabsTrigger>
+              </TabsList>
+            </div>
+            {/* Filters (right, flex-1) */}
+            <div className="flex-1">
+              <FilterBar filters={filters} setFilters={setFilters} />
+            </div>
+          </div>
 
-        {/* 🔍 Filters (shared UI, but reset on tab change) */}
-        <div className="mt-6">
-          <FilterBar filters={filters} setFilters={setFilters} />
-        </div>
+          {/* 🏠 Houses */}
+          <TabsContent value="houses">
+            <PropertiesGrid data={filteredHouses} />
+          </TabsContent>
 
-        {/* 🏠 Houses */}
-        <TabsContent value="houses">
-          <PropertiesGrid data={filteredHouses} />
-        </TabsContent>
+          {/* 🏢 Commercial */}
+          <TabsContent value="commercial">
+            <PropertiesGrid data={filteredCommercial} />
+          </TabsContent>
 
-        {/* 🏢 Commercial */}
-        <TabsContent value="commercial">
-          <PropertiesGrid data={filteredCommercial} />
-        </TabsContent>
-
-        {/* 🏡 Renting */}
-        <TabsContent value="renting">
-          <PropertiesGrid data={filteredRenting} />
-        </TabsContent>
-      </Tabs>
+          {/* 🏡 Renting */}
+          <TabsContent value="renting">
+            <PropertiesGrid data={filteredRenting} />
+          </TabsContent>
+        </Tabs>
+      </div>
     </div>
   );
 }
