@@ -11,7 +11,7 @@
     "status": "For Sale",
     "size": 120,
     "description": "A beautiful modern bungalow located in the heart of London. Features spacious rooms and a large garden.",
-    "image": "/property-imgs/house_01.png"
+    "image": "/commercial-imgs/commercial_01.jpg"
   },
   {
     "id": 2,
@@ -25,7 +25,7 @@
     "status": "For Sale",
     "size": 1120,
     "description": "A beautiful modern bungalow located in the heart of London. Features spacious rooms and a large garden.",
-    "image": "/property-imgs/house_01.png"
+    "image": "/commercial-imgs/commercial_01.jpg"
   },
   {
     "id": 3,

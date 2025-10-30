@@ -4,32 +4,17 @@ import Link from "next/link";
 import Image from "next/image";
 import { Separator } from "@/components/ui/separator";
 
-export function SeparatorDemo() {
-  return (
-    <div>
-      <Separator className="my-4" />
-      <div className="flex h-5 items-center space-x-4 text-sm">
-        <div>Blog</div>
-        <Separator orientation="vertical" />
-        <div>Docs</div>
-        <Separator orientation="vertical" />
-        <div>Source</div>
-      </div>
-    </div>
-  );
-}
-
 export default function PropertyCard({ property }) {
   return (
     <Link href={`/properties/${property.slug}`}>
       <div className="rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all cursor-pointer bg-white dark:bg-zinc-900">
         {/* ✅ Image wrapper MUST have relative + fixed height */}
-        <div className="relative w-full h-[25vh] bg-gray-100">
+        <div className="relative w-full h-[30vh] sm:h-[30vh] md:h-[25vh] lg:h-[25vh] bg-gray-100">
           <Image
             src={property.image} // dynamically from JSON
             alt={property.title || "Property image"}
             fill
-            className="contain"
+            className="object-cover"
             sizes="(max-width: 768px) 100vw, 33vw"
             priority={false}
           />

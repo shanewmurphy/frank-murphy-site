@@ -11,27 +11,6 @@ import PropertiesGrid from "@/components/Properties/PropertiesGrid";
 
 import { Separator } from "@/components/ui/separator";
 
-export function SeparatorDemo() {
-  return (
-    <div>
-      <div className="space-y-1">
-        <h4 className="text-sm leading-none font-medium">Radix Primitives</h4>
-        <p className="text-muted-foreground text-sm">
-          An open-source UI component library.
-        </p>
-      </div>
-      <Separator className="my-4" />
-      <div className="flex h-5 items-center space-x-4 text-sm">
-        <div>Blog</div>
-        <Separator orientation="vertical" />
-        <div>Docs</div>
-        <Separator orientation="vertical" />
-        <div>Source</div>
-      </div>
-    </div>
-  );
-}
-
 export default function PropertyTabs() {
   const [activeTab, setActiveTab] = useState("houses");
   const [filters, setFilters] = useState({
@@ -82,9 +61,9 @@ export default function PropertyTabs() {
           className="flex w-full"
         >
           {/* Tabs and Filters side by side, now using flex */}
-          <div className="flex gap-8 items-start w-full">
+          <div className="flex flex-col md:flex-row gap-4 md:gap-24 w-full justify-between p-4 rounded-xl drop-shadow-md bg-white dark:bg-zinc-900 mb-4">
             {/* Tab list (left, flex-1) */}
-            <div className="flex-1">
+            <div className="w-full md:flex-1">
               <TabsList className="w-full bg-muted/30">
                 <TabsTrigger value="houses">Houses</TabsTrigger>
                 <TabsTrigger value="commercial">Commercial</TabsTrigger>
@@ -92,7 +71,7 @@ export default function PropertyTabs() {
               </TabsList>
             </div>
             {/* Filters (right, flex-1) */}
-            <div className="flex-1">
+            <div className="w-full md:flex-1">
               <FilterBar filters={filters} setFilters={setFilters} />
             </div>
           </div>
