@@ -35,8 +35,8 @@ export default function PropertyCard({ property }) {
           <Separator className="my-2" />
           <div className="flex text-sm items-center justify-between font-medium text-gray-500 mt-1">
             <div className="text-base text-gray-800">
-              {property.rooms}{" "}
-              <span className="text-xs text-gray-500">Beds</span>
+              {property.rooms}
+              <span className="text-xs text-gray-500 pl-1">Beds</span>
             </div>
             <div className="h-5">
               <Separator orientation="vertical" />
@@ -49,7 +49,8 @@ export default function PropertyCard({ property }) {
               <Separator orientation="vertical" />
             </div>
             <div className="text-base text-gray-800">
-              {property.size} <spam className="text-xs text-gray-500">m2</spam>
+              {property.size}
+              <spam className="text-xs text-gray-500">m2</spam>
             </div>
           </div>
         </div>

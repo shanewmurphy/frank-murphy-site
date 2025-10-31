@@ -61,11 +61,11 @@ export default function PropertyTabs() {
           className="flex w-full"
         >
           {/* Tabs and Filters side by side, now using flex */}
-          <div className="flex flex-col md:flex-row gap-4 md:gap-24 w-full justify-between p-4 rounded-xl drop-shadow-md bg-white dark:bg-zinc-900 mb-4">
+          <div className="flex flex-col md:flex-row lg:gap-16 md:gap-6 sm:gap-8 p-4 rounded-xl drop-shadow-md bg-white dark:bg-zinc-900 mb-4">
             {/* Tab list (left, flex-1) */}
-            <div className="w-full md:flex-1">
-              <TabsList className="w-full bg-muted/30">
-                <TabsTrigger value="houses">Houses</TabsTrigger>
+            <div className="md:flex-1">
+              <TabsList className="w-full bg-muted/80">
+                <TabsTrigger value="houses">For Sale</TabsTrigger>
                 <TabsTrigger value="commercial">Commercial</TabsTrigger>
                 <TabsTrigger value="renting">Renting</TabsTrigger>
               </TabsList>
