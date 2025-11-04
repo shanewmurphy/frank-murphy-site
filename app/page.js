@@ -3,7 +3,7 @@ import PropertyTabs from "@/components/Filters/PropertyTabs";
 
 export default function Home() {
   return (
-    <div className="lg:w-[90vw] xl:w-[80vw] 2xl:w-[60vw] xs:w-[90vw] mx-auto font-sans dark:bg-black">
+    <div className="xl:w-[80vw] lg:w-[80vw] md:w-[90vw] sm:w-[95vw] mx-auto font-sans dark:bg-black">
       <div className="mt-28">
         <PropertyTabs />
       </div>

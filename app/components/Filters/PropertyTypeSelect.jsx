@@ -29,8 +29,8 @@ export default function PropertyTypeSelect({ filters, setFilters }) {
   return (
     <div className="flex flex-col gap-2">
       <Select value={filters.type || ""} onValueChange={handleChange}>
-        <SelectTrigger className="w-[200px]">
-          <SelectValue placeholder="Select property type..." />
+        <SelectTrigger className="w-[170px] font-medium">
+          <SelectValue placeholder="Property type..." />
         </SelectTrigger>
         <SelectContent>
           <SelectGroup>

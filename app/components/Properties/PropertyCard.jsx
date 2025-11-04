@@ -7,7 +7,7 @@ import { Separator } from "@/components/ui/separator";
 export default function PropertyCard({ property }) {
   return (
     <Link href={`/properties/${property.slug}`}>
-      <div className="rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all cursor-pointer bg-white dark:bg-zinc-900">
+      <div className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all cursor-pointer bg-white dark:bg-zinc-900">
         {/* ✅ Image wrapper MUST have relative + fixed height */}
         <div className="relative w-full h-[30vh] sm:h-[30vh] md:h-[25vh] lg:h-[25vh] bg-gray-100">
           <Image
