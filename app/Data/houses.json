@@ -22,7 +22,7 @@
     "type": "Semi-Detached",
     "rooms": 6,
     "bathrooms": 4,
-    "status": "For Sale",
+    "status": "Sold",
     "size": 1120,
     "description": "A beautiful modern bungalow located in the heart of London. Features spacious rooms and a large garden.",
     "image": "/property-imgs/house_02.png"
@@ -64,7 +64,7 @@
     "type": "Semi-Detached",
     "rooms": 8,
     "bathrooms": 3,
-    "status": "For Sale",
+    "status": "Sold",
     "size": 6000,
     "description": "A beautiful modern bungalow located in the heart of London. Features spacious rooms and a large garden.",
     "image": "/property-imgs/house_04.png"
@@ -106,7 +106,7 @@
     "type": "Apartment",
     "rooms": 6,
     "bathrooms": 4,
-    "status": "For Sale",
+    "status": "Sold",
     "size": 1120,
     "description": "A beautiful modern bungalow located in the heart of London. Features spacious rooms and a large garden.",
     "image": "/property-imgs/house_03.png"
@@ -148,7 +148,7 @@
     "type": "Apartment",
     "rooms": 6,
     "bathrooms": 4,
-    "status": "For Sale",
+    "status": "Sold",
     "size": 1120,
     "description": "A beautiful modern bungalow located in the heart of London. Features spacious rooms and a large garden.",
     "image": "/property-imgs/house_02.png"

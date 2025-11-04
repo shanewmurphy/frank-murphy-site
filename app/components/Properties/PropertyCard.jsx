@@ -10,6 +10,11 @@ export default function PropertyCard({ property }) {
       <div className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all cursor-pointer bg-white dark:bg-zinc-900">
         {/* ✅ Image wrapper MUST have relative + fixed height */}
         <div className="relative w-full h-[30vh] sm:h-[30vh] md:h-[25vh] lg:h-[25vh] bg-gray-100">
+          {property.status === "Sold" && (
+            <div className="absolute top-3 left-3 z-10 bg-red-600 text-white text-sm font-semibold px-3.5 py-1 rounded">
+              Sold
+            </div>
+          )}
           <Image
             src={property.image} // dynamically from JSON
             alt={property.title || "Property image"}
